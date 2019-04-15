@@ -1,9 +1,9 @@
 
-docker pull mysql:5.7    
-docker pull phpmyadmin/phpmyadmin    
+sudo docker pull mysql:5.7    
+sudo docker pull phpmyadmin/phpmyadmin    
 
-docker run --name mysql1 -e MYSQL_ROOT_PASSWORD=admin  -d mysql:5.7
-docker run --name phpmyadmin -d --link mysql1:db -p 8081:80 phpmyadmin/phpmyadmin      
+sudo docker run --name mysql1 -e MYSQL_ROOT_PASSWORD=admin  -d mysql:5.7
+sudo docker run --name phpmyadmin -d --link mysql1:db -p 8081:80 phpmyadmin/phpmyadmin      
 
 0.0.0.0:8081   
 user:root   
